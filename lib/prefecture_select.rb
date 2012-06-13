@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # PrefectureSelect
 module ActionView
   module Helpers

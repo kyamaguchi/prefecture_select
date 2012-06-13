@@ -12,11 +12,11 @@ module ActionView
       #
       # NOTE: Only the option tags are returned, you have to wrap this call in a regular HTML select tag.
       def prefecture_options_for_select(selected = nil, priority_prefectures = nil)
-        prefecture_options = ""
+        prefecture_options = "".html_safe
 
         if priority_prefectures
           prefecture_options += options_for_select(priority_prefectures, selected)
-          prefecture_options += "<option value=\"\" disabled=\"disabled\">-------------</option>\n"
+          prefecture_options += "<option value=\"\" disabled=\"disabled\">-------------</option>\n".html_safe
           # prevents selected from being included twice in the HTML which causes
           # some browsers to select the second selected option (not priority)
           # which makes it harder to select an alternative priority prefecture

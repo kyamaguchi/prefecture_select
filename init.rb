@@ -1,1 +1,1 @@
-require 'country_select'
+require 'prefecture_select'
